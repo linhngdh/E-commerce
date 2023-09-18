@@ -1,0 +1,117 @@
+.carousel-item {
+    height: 65vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+  }
+  .site-logo a {
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 2px solid #25262a;
+  color: #000 !important; }
+  .site-logo a:hover {
+    text-decoration: none;
+     }
+     button {
+     width:100px;
+  font-size: 18px;
+  color: #e1e1e1;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+.comic-button {
+  display: table-cell;
+  vertical-align: middle;
+
+
+	
+  display: inline-block;
+  
+  padding: 10px 20px;
+  margin-right: 0 auto;
+    font-size: 14px;
+  width:150px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #ff5252;
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #000;
+  transition: all 0.3s ease;
+}
+
+.comic-button:hover {
+  background-color: #fff;
+  color: #ff5252;
+  border: 2px solid #ff5252;
+  box-shadow: 5px 5px 0px #ff5252;
+}
+
+.comic-button:active {
+  background-color: #fcf414;
+  box-shadow: none;
+  transform: translateY(4px);
+}
+.pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 0;
+}
+
+.flex-item {
+    width: 33.33%; /* 3 cột trong một hàng */
+    padding: 5px;
+    box-sizing: border-box;
+}
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.search-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+

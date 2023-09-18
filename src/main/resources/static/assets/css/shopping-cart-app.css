@@ -1,0 +1,22 @@
+.poly-item img {
+    max-width: 95%;
+    height: 150px;
+    transition: transform .5s ease;
+}
+
+.poly-item .panel-title {
+    font-size: smaller;
+}
+
+.poly-item-detail img {
+    max-width: 80%;
+}
+
+.poly-item:hover img {
+    transform: scale(1.2);
+}
+
+.poly-item {
+    height: 275px;
+    overflow: hidden;
+}

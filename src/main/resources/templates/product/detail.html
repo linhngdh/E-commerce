@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{/layout/index :: dynamic(~{::main})}">
+
+<body>
+    <main th:object="${item}" class="poly-item-detail">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-body text-center">
+                            <img th:src="@{|/assets/products/${item.image}|}" alt="Product Image" class="img-responsive">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                          <div class="col-md-8">
+                    <div class="panel panel-primary">
+                        <div class="panel-body" style="font-size: 15px;">
+                            <ul>
+                                <li>
+                                    <span style="color: blue;">Product Name:</span>
+                                    <span th:text="*{name}"></span>
+                                </li>
+                                <li>
+                                    <span style="color: green;">Price:</span>
+                                    <span th:text="*{price}"></span>
+                                </li>
+                               
+                                <li>
+                                    <span style="color: orange;">Category:</span>
+                                    <span th:text="*{category.name}"></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="panel-footer text-right">
+                            <button th:attr="ng-click=@{|cart.add(*{id})|}" class="btn btn-success">
+                                <i class="glyphicon glyphicon-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                 
+                </div>
+                
+                
+                                  <div class="col-md-8">
+                    <div class="panel panel-primary">
+                 
+                     <h5>
+                     Mô Tả:
+                     <br>
+                     <span th:text="*{name}"></span>
+                     <br>
+                       Đây là sản phẩm đến từ Shein
+                       <br>
+                       
+                      
+                     </h5>
+                    </div>
+                 
+                </div>
+                </div>
+                
+                
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading" style="font-size: 15px;">RELATED PRODUCTS</div>
+                    </div>
+                    <div class="panel-body">
+                        <ul>
+                            <li th:each="p:*{category.products}">
+                                <a th:href="@{|/product/detail/${p.id}|}" th:text="${p.name}" ></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
